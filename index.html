@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-a-sketch</title>
+  </head>
+  <body>
+    <h1 class="heading">Etch-a-sketch</h1>
+    <div class="section">
+      <div class="control-panel">
+        <div class="control">
+          <input type="color" id="color-selector" value="#000000" onchange="getColor(event)" />
+        </div>
+        <div class="control">
+          <button class="colorbtn" onclick="toggleColorMode()">Color Mode</button>
+        </div>
+        <div class="control">
+          <button class="rainbowbtn" onclick="toggleRainbowMode()">Rainbow Mode</button>
+        </div>
+        <div class="control">
+          <button class="eraserbtn" onclick="toggleEraserMode()">Eraser</button>
+        </div>
+        <div class="control">
+          <button class="clearbtn" onclick="clearGrid()">Clear</button>
+        </div>
+        <div class="control slider-div">
+          <label for="input-slider" class="input-slider-val">16 * 16</label>
+          <input type="range" min="1" max="64" value="16" id="input-slider" onchange="updateGridSize(event.target.value)" />
+        </div>
+      </div>
+      <div class="container"></div>
+    </div>
+  </body>
+</html>
